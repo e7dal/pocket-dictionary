@@ -2,6 +2,9 @@ from dataclasses import asdict, make_dataclass
 from json import dumps
 
 
+__version__ = '0.0.1'
+
+
 class Pocket:
 
     @property
