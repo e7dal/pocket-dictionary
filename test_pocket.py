@@ -1,21 +1,21 @@
 import unittest
 from typing import List
 
-from pocket import pocket
+from pocket import dictionary
 
 
-@pocket
+@dictionary
 class Apple:
     a: str
     b: int
 
 
-@pocket(frozen=True)
+@dictionary(frozen=True)
 class Banana:
     apples: List[Apple]
 
 
-@pocket
+@dictionary
 class Cat:
     pass
 

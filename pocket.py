@@ -5,7 +5,7 @@ from json import dumps
 __version__ = '0.0.1'
 
 
-class Pocket:
+class Dictionary:
 
     @property
     def dict(self):
@@ -16,7 +16,7 @@ class Pocket:
         return dumps(self.dict)
 
 
-def _pocket(cls, **kwargs):
+def _dictionary(cls, **kwargs):
     fields = [
         (p, t) for p, t in cls.__annotations__.items()
     ] if hasattr(cls, '__annotations__') else []
@@ -24,12 +24,12 @@ def _pocket(cls, **kwargs):
     return make_dataclass(
         cls.__name__,
         fields,
-        bases=(Pocket,),
+        bases=(Dictionary,),
         **kwargs
     )
 
 
-def pocket(
+def dictionary(
     _cls=None,
     *,
     init: bool=True,
@@ -41,7 +41,7 @@ def pocket(
 ):
 
     def wrap(cls):
-        return _pocket(
+        return _dictionary(
             cls,
             init=init,
             repr=repr,
