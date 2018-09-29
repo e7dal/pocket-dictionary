@@ -3,6 +3,12 @@ language: python
 python:
 - "3.7-dev"
 
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+
 script:
 - python3 -m unittest
 
@@ -13,4 +19,4 @@ deploy:
   on:
     tags: true
     branch: master
-    python: '3.7-dev'
+    python: '3.7'
