@@ -23,7 +23,7 @@ class PizzaSlice:
     toppings: List[Topping]
 
 
-p = PizzaSlice([Topping('pepperoni'), Topping('cheese')]
+p = PizzaSlice([Topping('pepperoni'), Topping('cheese')])
 p.dict  # {'toppings': [{'name': 'pepperoni'}, {'name': 'cheese'}]}
 p.json  # '{"toppings": [{"name": "pepperoni"}, {"name": "cheese"}]}'
 ```
