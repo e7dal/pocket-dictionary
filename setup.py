@@ -6,7 +6,7 @@ import pocket
 setuptools.setup(
     name='pocket-dictionary',
     version=pocket.__version__,
-    description='',
+    description='Your handy dict',
     url='https://github.com/sunghyunzz/pocket-dictionary',
     author='Sunghyun Hwang',
     author_email='me' '@' 'sunghyunzz.com',
