@@ -4,7 +4,7 @@ import pocket
 
 
 setuptools.setup(
-    name='Pocket Dictionary',
+    name='pocket-dictionary',
     version=pocket.__version__,
     description='',
     url='https://github.com/sunghyunzz/pocket-dictionary',
